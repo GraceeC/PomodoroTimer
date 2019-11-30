@@ -2,7 +2,7 @@
     background-color:grey;
     text-align: center;
     width:50%;
-    padding-top:20px;
+    padding-top:2px;
     margin-top:15%;
     margin-left:25%;
     padding-bottom:20px;
@@ -11,9 +11,12 @@
     font-family: 'Playfair Display', serif;
 }
 #timer{
-    padding-top:1.5px;
+    padding-top:.5px;
     
-    
+}
+.session{
+font-size:14px;
+padding-left:0px;
 }
 #buttons{
     padding-top:10px;
