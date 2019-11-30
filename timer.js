@@ -1,4 +1,3 @@
-let x = new Date();
-let min = x.getMinutes();
-let sec = x.getSeconds();
-console.log(x);
+let timer;
+let min = 0;
+let sec =0;
