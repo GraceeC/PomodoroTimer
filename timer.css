@@ -1,3 +1,31 @@
-body{
+#conatiner{
     background-color:grey;
+    text-align: center;
+    width:50%;
+    padding-top:20px;
+    margin-top:15%;
+    margin-left:25%;
+    padding-bottom:20px;
+    border:2px solid black;
+    border-radius:10px;
+}
+#timer{
+    padding-top:1.5px;
+    
+    
+}
+#buttons{
+    padding-top:10px;
+}
+#start{
+    background-color:white;
+    font-size:14px;
+    border-radius:3px;
+    
+}
+#reset{
+    background-color:white;
+    font-size:14px;
+    border-radius:3px;
+    
 }
