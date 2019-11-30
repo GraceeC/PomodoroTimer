@@ -16,7 +16,12 @@
 }
 .session{
 font-size:14px;
-padding-left:0px;
+padding-top:2px;
+
+}
+.break{
+    font-size:14px;
+    padding-left:0px;  
 }
 #buttons{
     padding-top:10px;
