@@ -13,7 +13,7 @@ document.querySelector('.session').innerHTML = min + ':';
 document.querySelector('.session').innerHTML = sec;
 document.querySelector('.session').innerHTML = minutesSeconds;
 
-document.querySelector('.break').innerHTML = sec;
+document.querySelector('.break').innerHTML = min ':';
 document.querySelector('.break').innerHTML = sec;
 document.querySelector('.break').innerHTML = minutesSeconds;
 
