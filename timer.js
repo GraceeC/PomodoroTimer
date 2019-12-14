@@ -1,37 +1,36 @@
-function session(){
-let x = new Date();
-let min = x.getMinutes();
-let sec = x.getSeconds();
+let totalSeconds = 1500;
+let totalMinutes = 25;
+let timer = totalSeconds + totalMinutes;
 let sessionBtn = document.getElementById('start');
 let sessionBtnReset = document.getElementById('reset');
 let startBrk = document.getElementById('startBrk');
 let resetBrake = document.getElementById('resetBrk');
-let minutesSeconds = `${min}:${sec}`;
-console.log(x);
 
-document.querySelector('.session').innerHTML = min + ':';
-document.querySelector('.session').innerHTML = sec;
-document.querySelector('.session').innerHTML = minutesSeconds;
+const startButton = document.getElementById("start");
+startButton.addEventListener("click", function(e) {
+  setInterval(function() {
+    totalSeconds = totalSeconds - 1;
+    const minutes = Math.floor((totalSeconds % 1500) / 60);
+    const seconds = totalSeconds % 60;
+    document.querySelector('.session').innerHTML=minutes + ':' + seconds;
+    }, 1000);
 
-document.querySelector('.break').innerHTML = min ':';
-document.querySelector('.break').innerHTML = sec;
-document.querySelector('.break').innerHTML = minutesSeconds;
+   
+});
+
 
 sessionBtn.addEventListener('click',function(e){
-console.log('start session btn clicked');
-});
-
-sessionBtnReset.addEventListener('click',function(e){
-console.log('reset session btn clicked');
-});
-startBrk.addEventListener('click',function(e){
-    console.log('start brake btn clicked');
-});
-resetBrake.addEventListener('click',function(e){
-    console.log('reset brake btn clicked');
-});
-
-}
-
-session();
-
+    console.log('start session btn clicked');
+    });
+    
+    sessionBtnReset.addEventListener('click',function(e){
+    console.log('reset session btn clicked');
+    });
+    startBrk.addEventListener('click',function(e){
+        console.log('start brake btn clicked');
+    });
+    resetBrake.addEventListener('click',function(e){
+        console.log('reset brake btn clicked');
+    });
+    
+    
