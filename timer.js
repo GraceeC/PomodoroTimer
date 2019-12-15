@@ -12,7 +12,9 @@ startButton.addEventListener("click", function(e) {
     totalSeconds = totalSeconds - 1;
     const minutes = Math.floor((totalSeconds % 1500) / 60);
     const seconds = totalSeconds % 60;
-    document.querySelector('.session').innerHTML=minutes + ':' + seconds;
+    document.querySelector('.sessionMinutes').innerHTML=minutes + ':';
+    document.querySelector('.sessionSeconds').innerHTML=seconds;
+    
     }, 1000);
 
    
