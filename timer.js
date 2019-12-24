@@ -13,18 +13,19 @@ sessionBtn.addEventListener('click',() => {
 console.log('start session btn clicked');
 })
 sessionBtnReset.addEventListener('click',() => {
-    console.log('reset session btn clicked');
+    if (sessionBtnReset == sessionBtnReset){
+        console.log('session Btn works');
+        // buton needs to display
+    }
  });
 
 startBrk.addEventListener('click',() => {
 console.log('start brake btn clicked');
  });
 
-resetBrake.addEventListener('click',(resetBtn) =>{
+resetBrake.addEventListener('click',() =>{
 console.log('reset brake btn clicked');
-if (resetBtn == reset){
     console.log('hello');
-}
  });
     
 // global variable for time minutes & seconds
