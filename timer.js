@@ -14,7 +14,7 @@ console.log('start session btn clicked');
 })
 sessionBtnReset.addEventListener('click',() => {
     if (sessionBtnReset == sessionBtnReset){
-        console.log('session Btn works');
+        
         // buton needs to display
     }
  });
@@ -43,4 +43,5 @@ startButton.addEventListener("click", () => {
 
 
 
+    
     
