@@ -14,7 +14,19 @@
     padding-top:.5px;
     
 }
+#longTimer{
+    background-color:white;
+    font-size:14px;
+    border-radius:3px;
+    padding: 1px, 5px, 1px, 5px;
+}
+#shortTimer{
+    background-color:white;
+    font-size:14px;
+    border-radius:3px;
+}
 .session{
+padding:10px, 5px, 5px, 5px;
 font-size:14px;
 padding-top:2px;
 
