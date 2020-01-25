@@ -40,7 +40,7 @@ function longTimer(number) {
       let seconds = Math.floor(totalSeconds % 60);
       document.querySelector('#sessionMinutes').innerHTML =
         minutes + ':' + seconds;
-        if (number.length < 10) {
+        if (number < 10) {
             return '0' + number;
           } else {
             return number;
