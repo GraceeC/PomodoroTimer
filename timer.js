@@ -1,23 +1,24 @@
 // global variables
 let totalSeconds = 1500;
 let brakeTimerTime = 300;
-let sessionBtn = document.getElementById("start");
-let sessionBtnReset = document.getElementById("reset");
-let startBrk = document.getElementById("startBrk");
-let resetBrake = document.getElementById("resetBrk");
-let longSessionBtn = document.getElementById("longTimer");
+let sessionBtn = document.getElementById('start');
+let sessionBtnReset = document.getElementById('reset');
+let startBrk = document.getElementById('startBrk');
+let resetBrake = document.getElementById('resetBrk');
+let longSessionBtn = document.getElementById('longTimer');
 let shortSessionBtn = document.getElementById("shortTimer");
-let hideContainerThree = document.getElementById("container3");
+let hideContainerThree = document.getElementById('container3');
 
 // event listeners for Timer Butons & Brake buttons
-document.getElementById("start").addEventListener("click", () => {
-  console.log("start session btn clicked");
+document.getElementById('start').addEventListener('click', () => {
+  console.log('start session btn clicked');
 });
-startBrk.addEventListener("click", () => {
-  console.log("start brake btn clicked");
+startBrk.addEventListener('click', () => {
+  console.log('start brake btn clicked');
 });
-resetBrake.addEventListener("click", () => {
-  console.log("reset brake btn clicked");
+resetBrake.addEventListener('click', () => {
+  console.log('reset brake btn clicked');
+  console.log('hello');
 });
 
 // function toggleBtns(start){
@@ -30,38 +31,38 @@ resetBrake.addEventListener("click", () => {
 // }
 // toggleBtns();
 
+addZero();
+
 function longTimer(number) {
-  let startButton = document.getElementById("start");
-  startButton.addEventListener("click", () => {
+  let startButton = document.getElementById('start');
+  startButton.addEventListener('click', () => {
     setInterval(() => {
       totalSeconds = totalSeconds - 1;
       let minutes = Math.round(Math.round(totalSeconds % 1500) / 60);
       console.log(minutes);
       let seconds = Math.floor(totalSeconds % 60);
-      document.querySelector("#sessionMinutes").innerHTML =
-        minutes + ":" + seconds;
-
-      if (number < 10) {
-        return "0" + number;
-      } else {
-        return number;
-      }
+      document.querySelector('#sessionMinutes').innerHTML =
+        minutes + ':' + seconds;
+        if (number.length < 10) {
+            return '0' + number;
+          } else {
+            return number;
+          }
     }, 1000);
   });
 }
 longTimer();
 
 function brakeTime() {
-  let brakeBtn = document.getElementById("startBrk");
-  brakeBtn.addEventListener("click", () => {
+  let brakeBtn = document.getElementById('startBrk');
+  brakeBtn.addEventListener('click', () => {
     setInterval(() => {
       brakeTimerTime = brakeTimerTime - 1;
       let min = Math.round((brakeTimerTime % 300) / 60);
       let seconds = Math.floor(brakeTimerTime % 60);
-      document.querySelector(".text").innerHTML = min + ":" + seconds;
+      document.querySelector('.text').innerHTML = min + ':' + seconds;
     }, 1000);
   });
 }
 brakeTime();
 
-    
