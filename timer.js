@@ -18,7 +18,6 @@ startBrk.addEventListener('click', () => {
 });
 resetBrake.addEventListener('click', () => {
   console.log('reset brake btn clicked');
-  console.log('hello');
 });
 
 // function toggleBtns(start){
@@ -30,8 +29,6 @@ resetBrake.addEventListener('click', () => {
 //    }
 // }
 // toggleBtns();
-
-addZero();
 
 function longTimer(number) {
   let startButton = document.getElementById('start');
