@@ -50,17 +50,20 @@ function longTimer() {
     
 }
 longTimer();
-
 function brakeTime() {
-  let brakeBtn = document.getElementById('startBrk');
-  brakeBtn.addEventListener('click', () => {
-    setInterval(() => {
-      brakeTimerTime = brakeTimerTime - 1;
-      let min = Math.round((brakeTimerTime % 300) / 60);
-      let seconds = Math.floor(brakeTimerTime % 60);
-      document.querySelector('.text').innerHTML = min + ':' + seconds;
-    }, 1000);
-  });
+    let brakeBtn = document.getElementById('startBrk');
+    brakeBtn.addEventListener('click', () => {
+        setInterval(() => {
+            brakeTimerTime = brakeTimerTime - 1;
+            let min = Math.round(brakeTimerTime /60);
+            let seconds = Math.floor(brakeTimerTime % 60);
+            if (seconds < 10){
+                seconds = '0' + seconds;
+            }else{
+                seconds = seconds;
+            }
+            document.querySelector('.text').innerHTML = min + ':' + seconds;
+        }, 1000);
+    });
 }
 brakeTime();
-
