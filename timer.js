@@ -29,26 +29,23 @@ resetBrake.addEventListener('click', () => {
 //    }
 // }
 // toggleBtns();
-
-function longTimer(number) {
-  let startButton = document.getElementById('start');
-  startButton.addEventListener('click', () => {
-    setInterval(() => {
-      totalSeconds = totalSeconds - 1;
-      let minutes = Math.round(Math.round(totalSeconds % 1500) / 60);
-      console.log(minutes);
-      let seconds = Math.floor(totalSeconds % 60);
-      document.querySelector('#sessionMinutes').innerHTML =
-        minutes + ':' + seconds;
-        if (number < 10) {
-            return '0' + number;
-          } else {
-            return number;
-          }
-    }, 1000);
-  });
+function brakeTime() {
+    let brakeBtn = document.getElementById('startBrk');
+    brakeBtn.addEventListener('click', () => {
+        setInterval(() => {
+            brakeTimerTime = brakeTimerTime - 1;
+            let min = Math.round(brakeTimerTime /60);
+            let seconds = Math.floor(brakeTimerTime % 60);
+            if (seconds < 10){
+                seconds = '0' + seconds;
+            }else{
+                seconds = seconds;
+            }
+            document.querySelector('.text').innerHTML = min + ':' + seconds;
+        }, 1000);
+    });
 }
-longTimer();
+brakeTime();
 
 function brakeTime() {
   let brakeBtn = document.getElementById('startBrk');
