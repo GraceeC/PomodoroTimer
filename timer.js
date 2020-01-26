@@ -29,23 +29,27 @@ resetBrake.addEventListener('click', () => {
 //    }
 // }
 // toggleBtns();
-function brakeTime() {
-    let brakeBtn = document.getElementById('startBrk');
-    brakeBtn.addEventListener('click', () => {
+function longTimer() {
+    let startButton = document.getElementById('start');
+    startButton.addEventListener('click', () => {
         setInterval(() => {
-            brakeTimerTime = brakeTimerTime - 1;
-            let min = Math.round(brakeTimerTime /60);
-            let seconds = Math.floor(brakeTimerTime % 60);
+            totalSeconds = totalSeconds - 1;
+            let minutes = Math.round(totalSeconds / 60);
+            console.log(minutes);
+            let seconds = Math.floor(totalSeconds % 60) ;
             if (seconds < 10){
                 seconds = '0' + seconds;
             }else{
-                seconds = seconds;
+             seconds = seconds;
             }
-            document.querySelector('.text').innerHTML = min + ':' + seconds;
+            document.querySelector('#sessionMinutes').innerHTML =
+                minutes + ':' + seconds;
+                
         }, 1000);
     });
+    
 }
-brakeTime();
+longTimer();
 
 function brakeTime() {
   let brakeBtn = document.getElementById('startBrk');
