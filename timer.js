@@ -20,9 +20,6 @@ startBrk.addEventListener('click', () => {
 resetBrake.addEventListener('click', () => {
     console.log('reset brake btn clicked');
 });
-
-
-
 // function toggle() {
 //  document.getElementById('reset').addEventListener('click', () => {
 //     console.log('sessionBtnReset btn clicked');
@@ -35,24 +32,15 @@ resetBrake.addEventListener('click', () => {
 // });
 // }
 //toggle();
-
-
 function reset(){
      let reset =document.getElementById('reset').addEventListener('click', () => {
          if (reset === stop){
              console.log('it works');
              totalSeconds = clearInterval();
-         }
-     
-        
-        
+         }     
     });        
 
     }
-
-
-
-
 reset();
 
 function longTimer() {
@@ -74,8 +62,6 @@ function longTimer() {
     
 }
 longTimer();
-
-
 function brakeTime() {
     let brakeBtn = document.getElementById('startBrk');
     brakeBtn.addEventListener('click', () => {
