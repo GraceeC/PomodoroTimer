@@ -12,24 +12,16 @@
 }
 #timer{
     padding-top:.5px;
-    
 }
-#longTimer{
-    background-color:white;
-    font-size:14px;
-    border-radius:3px;
-    padding: 1px, 5px, 1px, 5px;
-}
-#shortTimer{
-    background-color:white;
-    font-size:14px;
-    border-radius:3px;
+.sessionMinutes{
+font-size:24px;
+padding-left:0px; 
+
+
 }
 .session{
-padding:10px, 5px, 5px, 5px;
-font-size:14px;
-padding-top:2px;
-
+    font-size:24px;
+    padding-left:0px;  
 }
 .break{
     font-size:24px;
@@ -42,6 +34,17 @@ padding-top:2px;
     background-color:white;
     font-size:14px;
     border-radius:3px;
+}
+#pause{
+        background-color:white;
+        font-size:14px;
+        border-radius:3px;
+}
+
+ #pauseBrk{
+background-color:white;
+font-size:14px;
+border-radius:3px;
     
 }
 #reset{
@@ -60,5 +63,4 @@ padding-top:2px;
     background-color:white;
     font-size:14px;
     border-radius:3px;
-    
 }
