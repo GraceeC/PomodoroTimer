@@ -1,34 +1,37 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Pomodoro Timer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="timer.css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet" />
+</head>
+
+<body>
     <div id="conatiner">
-      <h1>Pomodoro Timer</h1>
-      <div id="containerTwo">
-        <p class="session">Session</p>
-        <p class="sessionText"></p>
-        <button id="start">Start</button>
-        <button id="reset">Reset</button>
-        <div id="sessionMinutes"></div>
-        <div id="container3">
-          <p class="break">Break</p>
-          <p class="text"></p>
-          <div id="breakBtns"></div>
-          <button id="startBrk">Start</button>
-          <button id="resetBrk">Reset</button>
+        <h1>Pomodoro Timer</h1>
+        <div id="containerTwo">
+            <div id=sessionTime>
+                <p class="session">Session</p>
+                <p class="sessionText"></p>
+                <div id="sessionMinutes"></div>
+                <button id="start">Start</button>
+                <button id="pause">Pause</button>
+                <button id="reset">Reset</button>
+                <div id="container3">
+                    <p class="break">Break</p>
+                    <p class="text"></p>
+                    <div id="breakBtns"></div>
+                    <button id="startBrk">Start</button>
+                    <button id="pauseBrk">Pause</button>
+                    <button id="resetBrk">Reset</button>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-    <script src="timer.js"></script>
-  </body>
+        <script src="timer.js"></script>
+</body>
+
 </html>
