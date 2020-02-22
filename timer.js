@@ -2,22 +2,24 @@
 let totalSeconds = 1500;
 let brakeTimerTime = 300;
 let stop = clearInterval;
-let sessionBtn = document.getElementById('start');
-let sessionBtnReset = document.getElementById('reset');
-let startBrk = document.getElementById('startBrk');
-let resetBrake = document.getElementById('resetBrk');
-let longSessionBtn = document.getElementById('longTimer');
-let shortSessionBtn = document.getElementById("shortTimer");
-let hideContainerThree = document.getElementById('container3');
 
 // event listeners for Timer Butons & Brake buttons
 document.getElementById('start').addEventListener('click', () => {
     console.log('start session btn clicked');
 });
-startBrk.addEventListener('click', () => {
-    console.log('start brake btn clicked');
+document.getElementById('pause').addEventListener('click', () => {
+    console.log('paused clicked');
 });
-resetBrake.addEventListener('click', () => {
+document.getElementById('reset').addEventListener('click', () => {
+    console.log('reset clicked');
+});
+document.getElementById('startBrk').addEventListener('click', () => {
+    console.log('start break btn clicked ');
+});
+document.getElementById('pauseBrk').addEventListener('click', () => {
+    console.log('pause brake btn clicked');
+});
+document.getElementById('resetBrk').addEventListener('click', () => {
     console.log('reset brake btn clicked');
 });
 // function toggle() {
@@ -32,27 +34,25 @@ resetBrake.addEventListener('click', () => {
 // });
 // }
 //toggle();
-function reset(){
-     let reset =document.getElementById('reset').addEventListener('click', () => {
-         if (reset === stop){
-             console.log('it works');
-             totalSeconds = clearInterval();
-         }     
-    });        
+function pauseTimer(){
+           
 
     }
-reset();
+pauseTimer();
+
 
 function longTimer() {
     let startButton = document.getElementById('start');
     startButton.addEventListener('click', () => {
         setInterval(() => {
             totalSeconds = totalSeconds - 1;
-            let minutes = Math.floor(totalSeconds / 60)  ;
+            let minutes = (parseInt(Math.round(totalSeconds / 60)));
             console.log(minutes);
-            let seconds = Math.floor(totalSeconds % 60) ;
+            let seconds = (totalSeconds.toFixed() % 60);
             if (seconds < 10){
                 seconds = '0' + seconds;
+            }else{
+                clearInterval(totalSeconds);
             }
             document.querySelector('#sessionMinutes').innerHTML =
                 minutes + ':' + seconds;
