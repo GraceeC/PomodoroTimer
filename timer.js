@@ -46,9 +46,8 @@ function longTimer() {
     startButton.addEventListener('click', () => {
         setInterval(() => {
             totalSeconds = totalSeconds - 1;
-            let minutes = (parseInt(Math.round(totalSeconds / 60)));
-            console.log(minutes);
-            let seconds = (totalSeconds.toFixed() % 60);
+            let minutes = parseInt(totalSeconds / 60);
+            let seconds = 59;
             if (seconds < 10){
                 seconds = '0' + seconds;
             }else{
