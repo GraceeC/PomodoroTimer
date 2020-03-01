@@ -1,11 +1,10 @@
 // global variables
 let totalSeconds = 1500;
 let brakeTimerTime = 300;
-let stop = clearInterval;
 
 // event listeners for Timer Butons & Brake buttons
 document.getElementById('start').addEventListener('click', () => {
-    console.log('start session btn clicked');
+    longTimer();
 });
 document.getElementById('pause').addEventListener('click', () => {
     console.log('paused clicked');
@@ -34,41 +33,31 @@ document.getElementById('resetBrk').addEventListener('click', () => {
 // });
 // }
 //toggle();
-function pauseTimer(){
-           
-
-    }
-pauseTimer();
-
 
 function longTimer() {
-    let startButton = document.getElementById('start');
-    startButton.addEventListener('click', () => {
-        setInterval(() => {
+            setInterval(() => {
             totalSeconds = totalSeconds - 1;
             let minutes = parseInt(totalSeconds / 60);
-            let seconds = 59;
-            if (seconds < 10){
+            let seconds = totalSeconds % 60;
+            if (seconds < 10) {
                 seconds = '0' + seconds;
-            }else{
-                clearInterval(totalSeconds);
             }
             document.querySelector('#sessionMinutes').innerHTML =
                 minutes + ':' + seconds;
-                
-        }, 1000);
-    });
-    
+            },1000);
 }
+
+
 longTimer();
+
 function brakeTime() {
     let brakeBtn = document.getElementById('startBrk');
     brakeBtn.addEventListener('click', () => {
         setInterval(() => {
             brakeTimerTime = brakeTimerTime - 1;
-            let min = Math.round(brakeTimerTime /60);
+            let min = Math.round(brakeTimerTime / 60);
             let seconds = Math.floor(brakeTimerTime % 60);
-            if (seconds < 10){
+            if (seconds < 10) {
                 seconds = '0' + seconds;
             }
             document.querySelector('.text').innerHTML = min + ':' + seconds;
