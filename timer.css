@@ -1,66 +1,61 @@
-#conatiner{
-    background-color:grey;
-    text-align: center;
-    width:50%;
-    padding-top:2px;
-    margin-top:15%;
-    margin-left:25%;
-    padding-bottom:35px;
-    border:2px solid black;
-    border-radius:10px;
-    font-family: 'Playfair Display', serif;
+#conatiner {
+  background-color: grey;
+  text-align: center;
+  width: 50%;
+  padding-top: 2px;
+  margin-top: 15%;
+  margin-left: 25%;
+  padding-bottom: 35px;
+  border: 2px solid black;
+  border-radius: 10px;
+  font-family: "Playfair Display", serif;
 }
-#timer{
-    padding-top:.5px;
+#timer {
+  padding-top: 0.5px;
 }
-.sessionMinutes{
-font-size:24px;
-padding-left:0px; 
-
-
+.sessionMinutes {
+  font-size: 24px;
+  padding-left: 0px;
 }
-.session{
-    font-size:24px;
-    padding-left:0px;  
+.session {
+  font-size: 24px;
+  padding-left: 0px;
 }
-.break{
-    font-size:24px;
-    padding-left:0px;  
+.break {
+  font-size: 24px;
+  padding-left: 0px;
 }
-#buttons{
-    padding-top:10px;
+#buttons {
+  padding-top: 10px;
 }
-#start{
-    background-color:white;
-    font-size:14px;
-    border-radius:3px;
+#start {
+  background-color: white;
+  font-size: 14px;
+  border-radius: 3px;
 }
-#pause{
-        background-color:white;
-        font-size:14px;
-        border-radius:3px;
+#pause {
+  background-color: white;
+  font-size: 14px;
+  border-radius: 3px;
 }
 
- #pauseBrk{
-background-color:white;
-font-size:14px;
-border-radius:3px;
-    
+#pauseBrk {
+  background-color: white;
+  font-size: 14px;
+  border-radius: 3px;
 }
-#reset{
-    background-color:white;
-    font-size:14px;
-    border-radius:3px;
-    
+#reset {
+  background-color: white;
+  font-size: 14px;
+  border-radius: 3px;
 }
-#startBrk{
-    background-color:white;
-    font-size:14px;
-    border-radius:3px;
-    
+#startBrk {
+  background-color: white;
+  font-size: 14px;
+  border-radius: 3px;
 }
-#resetBrk{
-    background-color:white;
-    font-size:14px;
-    border-radius:3px;
+#resetBrk {
+  background-color: white;
+  font-size: 14px;
+  border-radius: 3px;
 }
