@@ -45,7 +45,6 @@ function displayTimer(currentTime, display) {
   }
   longTimerDisplay.innerHTML = minutes + ":" + seconds;
 }
-//global variable for longTimer
 displayTimer(totalSeconds, longTimerDisplay);
 
 //setInterval for my session timer
@@ -56,11 +55,11 @@ function longTimer() {
   }, 1000);
 }
 
-//function to stop longTimer
+//function to stop session timer
 function stopLongTimer() {
   clearTimeout(longTime);
 }
-
+// function to reset session timer
 function resetLongTimer() {
   stopLongTimer();
   displayTimer(totalSeconds, longTimerDisplay);
