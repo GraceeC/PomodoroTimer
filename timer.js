@@ -43,8 +43,15 @@ function displayTimer(currentTime, display) {
   if (seconds < 10) {
     seconds = "0" + seconds;
   }
+  if (minutes < 10){
+    minutes = '0' + minutes;
+  }
+  if (currentTime < 1){
+    clearTimeout(longTime);
+  }
   longTimerDisplay.innerHTML = minutes + ":" + seconds;
 }
+//global variable for longTimer
 displayTimer(totalSeconds, longTimerDisplay);
 
 //setInterval for my session timer
@@ -55,47 +62,60 @@ function longTimer() {
   }, 1000);
 }
 
-//function to stop session timer
+//function to stop longTimer
 function stopLongTimer() {
   clearTimeout(longTime);
 }
-// function to reset session timer
+
 function resetLongTimer() {
   stopLongTimer();
+  let totalSeconds = 1500;
   displayTimer(totalSeconds, longTimerDisplay);
 }
 
 // //globarl variable for brake
-// const brakeTimerDisplay = document.querySelector('.text');
-// //function for brake timer
-// function brakeTimer(brakeTime, displayBrake) {
-//   let min = parseInt(brakeTime / 60);
-//   console.log(min);
-//   let brakeSeconds = brakeTime % 60;
-//   console.log(brakeSeconds);
-//   if (brakeSeconds < 10) {
-//     brakeSeconds = "0" + brakeSeconds;
-//   }
-//   displayBrake.innerHTML = min + ":" + brakeSeconds;
-// }
-// brakeTimer(brakeTimerTime,brakeTimerDisplay);
+const brakeTimerDisplay = document.querySelector(".text");
+//function for brake timer
+function brakeTimer(brakeTime, displayBrake) {
+  let min = parseInt(brakeTime / 60);
+  console.log(min);
+  let brakeSeconds = brakeTime % 60;
+  console.log(brakeSeconds);
+  if (brakeSeconds < 10) {
+    brakeSeconds = "0" + brakeSeconds;
+  }
+  if ( min < 10){
+    min ='0'+ min;
+  }
+  if (brakeTime < 1){
+    stopBrakeTimer();
+  }
+  displayBrake.innerHTML = min + ":" + brakeSeconds;
+  }
+  brakeTimer(brakeTimerTime, brakeTimerDisplay);
 
-// //setInterval for brake timer
-// function shortTimer(){
-//   shortTime = setInterval(function (){
-//     brakeTimer(brakeTimerTime,brakeTimerDisplay);
-//     brakeTimerTime = brakeTimerTime -1;
-//   }, 1000);
-// }
+//setInterval for brake timer
+function shortTimer() {
+  shortTime = setInterval(function() {
+    brakeTimer(brakeTimerTime, brakeTimerDisplay);
+    brakeTimerTime = brakeTimerTime - 1;
+  }, 1000);
+ }
 
-// //function to stop shortTimer
-// function pauseShortTimer(){
-//   pauseBrake = setTimeout(() =>{
-//     brakeTimer(brakeTimerTime,brakeTimerDisplay)
-//   },1000);
-// }
-// pauseShortTimer();
-
-// function stopBrakeTimer(){
-//   clearTimeout(shortTime);
-// }
+//function to stop shortTimer
+function pauseShortTimer() {
+  pauseBrake = setTimeout(() => {
+    brakeTimer(brakeTimerTime, brakeTimerDisplay);
+  }, 1000);
+}
+pauseShortTimer();
+//function to pause brake timer
+function stopBrakeTimer() {
+  clearTimeout(shortTime);
+}
+//funtion to reset brake timer
+function resetShortTimer(){
+  stopBrakeTimer();
+  let brakeTimerTime = 300;
+  brakeTimer(brakeTimerTime, brakeTimerDisplay);
+}
