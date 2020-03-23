@@ -88,7 +88,9 @@ function brakeTimer(brakeTime, displayBrake) {
     min ='0'+ min;
   }
   if (brakeTime < 1){
-    stopBrakeTimer();
+    clearTimeout(shortTime);
+  }else{
+    brakeSeconds++;
   }
   displayBrake.innerHTML = min + ":" + brakeSeconds;
   }
