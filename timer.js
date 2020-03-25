@@ -29,49 +29,55 @@ document.getElementById("pauseBrk").addEventListener("click", () => {
 });
 document.getElementById("resetBrk").addEventListener("click", () => {
   console.log("reset brake btn clicked");
+  resetShortTimer();
+  //toggle event listener
+});
+document.getElementById("sliderBtn").addEventListener("click", () => {
+  console.log("works");
+  toggleButton();
 });
 
-// // global variable for session timer
-// const longTimerDisplay = document.querySelector("#sessionMinutes");
+// global variable for session timer
+const longTimerDisplay = document.querySelector("#sessionMinutes");
 
-// //session timer function
-// function displayTimer(currentTime, display) {
-//   let minutes = parseInt(currentTime / 60);
-//   console.log(minutes);
-//   let seconds = currentTime % 60;
-//   console.log(seconds);
-//   if (seconds < 10) {
-//     seconds = "0" + seconds;
-//   }
-//   if (minutes < 10){
-//     minutes = '0' + minutes;
-//   }
-//   if (currentTime < 1){
-//     clearTimeout(longTime);
-//   }
-//   longTimerDisplay.innerHTML = minutes + ":" + seconds;
-// }
-// //global variable for longTimer
-// displayTimer(totalSeconds, longTimerDisplay);
+//session timer function
+function displayTimer(currentTime, display) {
+  let minutes = parseInt(currentTime / 60);
+  console.log(minutes);
+  let seconds = currentTime % 60;
+  console.log(seconds);
+  if (seconds < 10) {
+    seconds = "0" + seconds;
+  }
+  if (minutes < 10) {
+    minutes = "0" + minutes;
+  }
+  if (currentTime < 1) {
+    clearTimeout(longTime);
+  }
+  longTimerDisplay.innerHTML = minutes + ":" + seconds;
+}
+//global variable for longTimer
+displayTimer(totalSeconds, longTimerDisplay);
 
-// //setInterval for my session timer
-// function longTimer() {
-//   longTime = setInterval(function() {
-//     displayTimer(totalSeconds, longTimerDisplay);
-//     totalSeconds = totalSeconds - 1;
-//   }, 1000);
-// }
+//setInterval for my session timer
+function longTimer() {
+  longTime = setInterval(function() {
+    displayTimer(totalSeconds, longTimerDisplay);
+    totalSeconds = totalSeconds - 1;
+  }, 1000);
+}
 
-// //function to stop longTimer
-// function stopLongTimer() {
-//   clearTimeout(longTime);
-// }
+//function to stop longTimer
+function stopLongTimer() {
+  clearTimeout(longTime);
+}
 
-// function resetLongTimer() {
-//   stopLongTimer();
-//   let totalSeconds = 1500;
-//   displayTimer(totalSeconds, longTimerDisplay);
-// }
+function resetLongTimer() {
+  stopLongTimer();
+  let totalSeconds = 1500;
+  displayTimer(totalSeconds, longTimerDisplay);
+}
 
 // //globarl variable for brake
 const brakeTimerDisplay = document.querySelector(".text");
@@ -101,7 +107,7 @@ brakeTimer(brakeTimerTime, brakeTimerDisplay);
 
 //setInterval for brake timer
 function shortTimer() {
-  shortTime = setInterval(function () {
+  shortTime = setInterval(function() {
     brakeTimer(brakeTimerTime, brakeTimerDisplay);
     brakeTimerTime = brakeTimerTime - 1;
   }, 1000);
@@ -124,4 +130,13 @@ function resetShortTimer() {
   stopBrakeTimer();
   let brakeTimerTime = 300;
   brakeTimer(brakeTimerTime, brakeTimerDisplay);
+}
+//toggle Button between long timer & short timer
+function toggleButton() {
+  let toggleBtn = document.getElementById("sessionTime");
+  if (toggleBtn.style.display == "none") {
+    toggleBtn.style.display = "block";
+  } else {
+    toggleBtn.style.display = "none";
+  }
 }
