@@ -30,11 +30,15 @@ document.getElementById("pauseBrk").addEventListener("click", () => {
 document.getElementById("resetBrk").addEventListener("click", () => {
   console.log("reset brake btn clicked");
   resetShortTimer();
-  //toggle event listener
+});
+//toggle event listener
+document.getElementById("sliderBtn").addEventListener("click", () => {
+  console.log("works");
+  toggleButtonSession();
 });
 document.getElementById("sliderBtn").addEventListener("click", () => {
   console.log("works");
-  toggleButton();
+  shortTimerToggle();
 });
 
 // global variable for session timer
@@ -132,11 +136,25 @@ function resetShortTimer() {
   brakeTimer(brakeTimerTime, brakeTimerDisplay);
 }
 //toggle Button between long timer & short timer
-function toggleButton() {
-  let toggleBtn = document.getElementById("sessionTime");
+function toggleButtonSession() {
+  let toggleBtn = document.getElementById('sessionTime');
   if (toggleBtn.style.display == "none") {
     toggleBtn.style.display = "block";
   } else {
     toggleBtn.style.display = "none";
+  }
+}
+function shortTimerToggle(){
+  let shortTimeToggleBtn =document.getElementById('break');
+  let longTimerSession = document.getElementById('sessionTime');
+  if (shortTimeToggleBtn.style.display = 'block') 
+  {
+    longTimerSession.style.display = 'none';
+    shortTimeToggleBtn.style.display = 'block';
+  }
+  else
+  {
+    longTimerSession.style.display = 'block';
+    shortTimeToggleBtn.style.display = 'none';
   }
 }
