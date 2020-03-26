@@ -34,10 +34,6 @@ document.getElementById("resetBrk").addEventListener("click", () => {
 //toggle event listener
 document.getElementById("sliderBtn").addEventListener("click", () => {
   console.log("works");
-  toggleButtonSession();
-});
-document.getElementById("sliderBtn").addEventListener("click", () => {
-  console.log("works");
   shortTimerToggle();
 });
 
@@ -134,15 +130,6 @@ function resetShortTimer() {
   stopBrakeTimer();
   let brakeTimerTime = 300;
   brakeTimer(brakeTimerTime, brakeTimerDisplay);
-}
-//toggle Button between long timer & short timer
-function toggleButtonSession() {
-  let toggleBtn = document.getElementById('sessionTime');
-  if (toggleBtn.style.display == "none") {
-    toggleBtn.style.display = "block";
-  } else {
-    toggleBtn.style.display = "none";
-  }
 }
 function shortTimerToggle(){
   let shortTimeToggleBtn =document.getElementById('break');
