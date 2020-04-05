@@ -125,12 +125,11 @@ span.sessionTime {
 
 input:checked+.slider {
   background-color:grey;
-  padding-bottom: 20em;
 }
 
 input:focus+.slider {
   box-shadow: 0 0 1px white;
-  padding-bottom: 20px;
+
 }
 
 
