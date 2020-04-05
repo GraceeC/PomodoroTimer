@@ -1,6 +1,6 @@
 // global variables
-let totalSeconds = 3;
-let brakeTimerTime = 300;
+let totalSeconds = 1500;
+let brakeTimerTime = 3;
 let longTime;
 let shortTime;
 let sessionPause;
@@ -58,7 +58,7 @@ function displayTimer(currentTime, display) {
   if (currentTime < 1) {
     clearTimeout(longTime);
   }
-  if (currentTime === 0){
+  if (currentTime === 0) {
     audio.play();
   }
   longTimerDisplay.innerHTML = minutes + ":" + seconds;
@@ -68,7 +68,7 @@ displayTimer(totalSeconds, longTimerDisplay);
 
 //setInterval for my session timer
 function longTimer() {
-  longTime = setInterval(function() {
+  longTime = setInterval(function () {
     displayTimer(totalSeconds, longTimerDisplay);
     totalSeconds = totalSeconds - 1;
   }, 1000);
@@ -88,68 +88,68 @@ function resetLongTimer() {
 // //globarl variable for brake
 const brakeTimerDisplay = document.querySelector(".text");
 
-// //function for brake timer
-// function brakeTimer(brakeTime, displayBrake) {
-//   let min = parseInt(brakeTime / 60);
-//   console.log(min);
-//   let brakeSeconds = brakeTime % 60;
-//   console.log(brakeSeconds);
-//   if (brakeSeconds < 10) {
-//     brakeSeconds = "0" + brakeSeconds;
-//   }
-//   if (min < 10) {
-//     min = "0" + min;
+//function for brake timer
+function brakeTimer(brakeTime, displayBrake) {
+  let min = parseInt(brakeTime / 60);
+  console.log(min);
+  let brakeSeconds = brakeTime % 60;
+  console.log(brakeSeconds);
+  if (brakeSeconds < 10) {
+    brakeSeconds = "0" + brakeSeconds;
+  }
+  if (min < 10) {
+    min = "0" + min;
 
-//     // conditional used to restart timer once timer is complete
-//   }
-//   if (brakeTime < 1) {
-//     stopBrakeTimer();
-//     brakeTimerTime = 300;
-//     brakeTimer(brakeTimerTime, brakeTimerDisplay);
-//   }
-//   displayBrake.innerHTML = min + ":" + brakeSeconds;
-// }
-// brakeTimer(brakeTimerTime, brakeTimerDisplay);
+    // conditional used to restart timer once timer is complete
+  }
+  if (brakeTime < 1) {
+    stopBrakeTimer();
+    brakeTimerTime = 300;
+    brakeTimer(brakeTimerTime, brakeTimerDisplay);
+  }
+  if (brakeTime === 0) {
+    audio.play();
+  }
+  displayBrake.innerHTML = min + ":" + brakeSeconds;
+}
+brakeTimer(brakeTimerTime, brakeTimerDisplay);
 
-// //setInterval for brake timer
-// function shortTimer() {
-//   shortTime = setInterval(function() {
-//     brakeTimer(brakeTimerTime, brakeTimerDisplay);
-//     brakeTimerTime = brakeTimerTime - 1;
-//   }, 1000);
-// }
+//setInterval for brake timer
+function shortTimer() {
+  shortTime = setInterval(function () {
+    brakeTimer(brakeTimerTime, brakeTimerDisplay);
+    brakeTimerTime = brakeTimerTime - 1;
+  }, 1000);
+}
 
-// //function to stop shortTimer
-// function pauseShortTimer() {
-//   pauseBrake = setTimeout(() => {
-//     brakeTimer(brakeTimerTime, brakeTimerDisplay);
-//   }, 1000);
-// }
-// pauseShortTimer();
+//function to stop shortTimer
+function pauseShortTimer() {
+  pauseBrake = setTimeout(() => {
+    brakeTimer(brakeTimerTime, brakeTimerDisplay);
+  }, 1000);
+}
+pauseShortTimer();
 
-// //function to pause brake timer
-// function stopBrakeTimer() {
-//   clearTimeout(shortTime);
-// }
-// //funtion to reset brake timer
-// function resetShortTimer() {
-//   stopBrakeTimer();
-//   let brakeTimerTime = 300;
-//   brakeTimer(brakeTimerTime, brakeTimerDisplay);
-// }
-// //toggle Button between long timer & short timer
-// function toggleBtn(isBrakeTimer){
-//   let shortTimeToggleBtn =document.getElementById('break');
-//   let longTimerSession = document.getElementById('sessionTime');
-//   if (isBrakeTimer === true) 
-//   {
-//     longTimerSession.style.display = 'none';
-//     shortTimeToggleBtn.style.display = 'block';
-//   }
-//   else
-//   {
-//     longTimerSession.style.display = 'block';
-//     shortTimeToggleBtn.style.display = 'none';
-//   }
-// }
+//function to pause brake timer
+function stopBrakeTimer() {
+  clearTimeout(shortTime);
+}
+//funtion to reset brake timer
+function resetShortTimer() {
+  stopBrakeTimer();
+  let brakeTimerTime = 300;
+  brakeTimer(brakeTimerTime, brakeTimerDisplay);
+}
+//toggle Button between long timer & short timer
+function toggleBtn(isBrakeTimer) {
+  let shortTimeToggleBtn = document.getElementById('break');
+  let longTimerSession = document.getElementById('sessionTime');
+  if (isBrakeTimer === true) {
+    longTimerSession.style.display = 'none';
+    shortTimeToggleBtn.style.display = 'block';
+  } else {
+    longTimerSession.style.display = 'block';
+    shortTimeToggleBtn.style.display = 'none';
+  }
+}
 
