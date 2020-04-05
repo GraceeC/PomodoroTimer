@@ -1,47 +1,46 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Pomodoro Timer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="timer.css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap"
-      rel="stylesheet"
-    />
-  </head>
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet" />
+</head>
 
-  <body>
+<body>
     <div id="conatiner">
-      <h1>Pomodoro Timer</h1>
+        <h1>Pomodoro Timer</h1>
 
-      <div id="containerTwo">
-        <div id="switchBox">
-          <label class="switch">
-            <input type="checkbox" id="sliderBtn" />
-            <span class="slider round"></span>
-          </label>
+        <div id="containerTwo">
+            <div id="switchBox">
+                <label class="switch">
+                    <input type="checkbox" id="sliderBtn" />
+                    <span class="slider round"></span>
+                </label>
+            </div>
+            <div id="sessionTime">
+                <p class="session">Session</p>
+                <p class="sessionText"></p>
+                <div id="sessionMinutes"></div>
+                <button id="start">Start</button>
+                <button id="pause">Pause</button>
+                <button id="reset">Reset</button>
+            </div>
         </div>
-        <div id="sessionTime">
-          <p class="session">Session</p>
-          <p class="sessionText"></p>
-          <div id="sessionMinutes"></div>
-          <button id="start">Start</button>
-          <button id="pause">Pause</button>
-          <button id="reset">Reset</button>
+        <div id="container3">
+            <div id="break">Break</p>
+                <p class="text"></p>
+                <div id="breakBtns">
+                    <button id="startBrk">Start</button>
+                    <button id="pauseBrk">Pause</button>
+                    <button id="resetBrk">Reset</button>
+                    <script src="timer.js"></script>
+                </div>
+            </div>
         </div>
-      </div>
-      <div id="container3">
-        <div id="break">Break</p>
-        <p class="text"></p>
-        <div id="breakBtns">
-          <button id="startBrk">Start</button>
-          <button id="pauseBrk">Pause</button>
-          <button id="resetBrk">Reset</button>
-        </div>
-      </div>
-    </div>
-    <script src="timer.js"></script>
-  </body>
+</body>
+
 </html>
