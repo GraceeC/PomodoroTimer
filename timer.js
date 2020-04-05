@@ -1,6 +1,6 @@
 // global variables
 let totalSeconds = 1500;
-let brakeTimerTime = 3;
+let brakeTimerTime = 300;
 let longTime;
 let shortTime;
 let sessionPause;
