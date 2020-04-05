@@ -17,16 +17,6 @@ h1{
   text-shadow: 2px 2px #2F4F4F;
   color:white;
 }
-#conatinerTwo{ 
-  padding-bottom:15px ;
-}
-span.sessionTime {
-  font-size: 16px;
-  padding-left: 0px;
-  padding-top: 20em;
-  padding-bottom: 2em;
-}
-
 #conatinerThree {
   font-size: 24px;
   padding-left: 0px;
@@ -34,11 +24,12 @@ span.sessionTime {
 #sessionTime{
   color: white;
   padding-bottom: 15px;
-  padding-top: 10px;
+  padding-top: 15px;
 }
-#sessionText{
+#sessionMinutes{
   color: white;
-  padding-bottom: 5px;
+  padding-bottom: 25px;
+  padding-top: 10px;
 }
 
 #break {
