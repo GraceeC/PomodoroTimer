@@ -14,7 +14,7 @@ Creating this application has helped me improve my JavaScript skills by learning
 
 <br>
 
-##Author
+## Author
 * **Grace Cardenas** - *Front End Developer* 
 
 <img src ="language.jpg" width="200" height="100">
