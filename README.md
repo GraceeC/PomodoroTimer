@@ -1,15 +1,16 @@
 # Pomodoro Timer
 
+For my Pomodoro application I used HTML, CSS and JavaScript. 
+
 <br>
 
-For my Pomodoro application I used HTML, CSS and JavaScript. 
+### View my PomodoroTimer [Click Here](https://graceec.github.io/PomodoroTimer/)
+
 <br>
 
 <img src ='session.png' img align='left' width='400' height='200'>
 
-<br>
 
-#### View my PomodoroTimer [Click Here](https://graceec.github.io/PomodoroTimer/)
 
 <br>
 
