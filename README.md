@@ -10,5 +10,5 @@ A PomodoroTimer using HTML, CSS and JavaScript
 
 ## Technique
 Creating this application has helped me improve my JavaScript skills in programming. 
-
+<p align:'center'>
 <img src ="language.jpg" width="200" height="100">
