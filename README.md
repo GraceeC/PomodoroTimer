@@ -6,8 +6,8 @@ For my Pomodoro application I used HTML, CSS and JavaScript.
 
 #### View my PomodoroTimer [Click Here](https://graceec.github.io/PomodoroTimer/)
 
-<img src ='break.png' img align='center' width='400' height='200'>
-<img src ='session.png' img align='center' width='400' height='200'>
+<img src ='break.png' img align='left' width='400' height='200'>
+<img src ='session.png' img align='right' width='400' height='200'>
 A PomodoroTimer using HTML, CSS and JavaScript
 
 ## Technique
