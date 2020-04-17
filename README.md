@@ -13,6 +13,7 @@ View my PomodoroTimer [Click Here](https://graceec.github.io/PomodoroTimer/)
 Creating this application has helped me improve my JavaScript skills by learning to use functions inside event listners, using set intervals and using simple math to create fundamentals of a timer.
 
 <br>
+
 ##Author
 * **Grace Cardenas** - *Front End Developer* 
 
