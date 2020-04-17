@@ -14,7 +14,7 @@ Creating this application has helped me improve my JavaScript skills by learning
 
 <br>
 
-<img src ="language.jpg" align:'right' width="200" height="100">
+## <img src ="language.jpg"  width="200" height="100">
 
 
 ## Author
