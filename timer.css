@@ -1,7 +1,7 @@
 body{
   background-color:peachpuff;
 }
-#conatiner{
+#container{
   background-color: grey;
   text-align: center;
   width: 50%;
@@ -26,71 +26,28 @@ h1{
   padding-bottom: 15px;
   padding-top: 15px;
 }
-#sessionMinutes{
+.heading{
   color: white;
   padding-bottom: 25px;
   padding-top: 10px;
 }
-
-#break {
-  color: white;
-  padding-bottom: 15px;
-  padding-top: 15px;
-}
-
-#buttons {
-  padding-top: 10px;
-}
-
-#start {
+.buttons {
   background-color: white;
   font-size: 14px;
-  border-radius: 3px;
+  border-radius: 8px;
+  padding-top: 25px;
 }
-
-#pause {
-  background-color: white;
-  font-size: 14px;
-  border-radius: 3px;
-}
-
-#pauseBrk {
-  background-color: white;
-  font-size: 14px;
-  border-radius: 3px;
-}
-
-#reset {
-  background-color: white;
-  font-size: 14px;
-  border-radius: 3px;
-}
-
-#startBrk {
-  background-color: white;
-  font-size: 14px;
-  border-radius: 3px;
-}
-
-#resetBrk {
-  background-color: white;
-  font-size: 14px;
-  border-radius: 3px;
-}
-
 .switch {
   position: relative;
   display: inline-block;
   width: 60px;
   height: 34px;
 }
-
 .switch input {
   opacity: 0;
   width: 0;
   height: 0;
 }
-
 .slider {
   position: absolute;
   cursor: pointer;
@@ -103,7 +60,6 @@ h1{
   transition: .4s;
   box-shadow: 1px 2px 5px black;
 }
-
 .slider:before {
   position: absolute;
   content: "";
@@ -115,28 +71,21 @@ h1{
   -webkit-transition: .4s;
   transition: .4s;
 }
-
 input:checked+.slider {
   background-color:grey;
 }
-
 input:focus+.slider {
   box-shadow: 0 0 1px white;
 
 }
-
-
 input:checked+.slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
 }
-
-/* Rounded sliders */
 .slider.round {
   border-radius: 34px;
 }
-
 .slider.round:before {
   border-radius: 50%;
 }
