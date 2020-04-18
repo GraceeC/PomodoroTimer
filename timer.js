@@ -1,4 +1,3 @@
-// global variables
 let workTimer = 1500;
 let breakTimer = 300;
 let longTime;
@@ -13,33 +12,33 @@ window.onload = function(e){
   pauseShortTimer();
 }
 
-document.getElementById("start").addEventListener("click", workTime);
-document.getElementById("pause").addEventListener("click", () => {
-  console.log("paused clicked");
+document.getElementById('start').addEventListener('click', workTime);
+document.getElementById('pause').addEventListener('click', () => {
+  console.log('paused clicked');
   stopWorkTimer();
 });
-document.getElementById("reset").addEventListener("click", () => {
-  console.log("reset clicked");
+document.getElementById('reset').addEventListener('click', () => {
+  console.log('reset clicked');
   resetLongTimer();
 });
-document.getElementById("startBrk").addEventListener("click", () => {
-  console.log("start break btn clicked ");
+document.getElementById('startBrk').addEventListener('click', () => {
+  console.log('start break btn clicked');
   breakTimer();
 });
-document.getElementById("pauseBrk").addEventListener("click", () => {
-  console.log("pause break btn clicked");
+document.getElementById('pauseBrk').addEventListener('click', () => {
+  console.log('pause break btn clicked');
   stopBreakTimer();
 });
-document.getElementById("resetBrk").addEventListener("click", () => {
-  console.log("reset break btn clicked");
+document.getElementById('resetBrk').addEventListener('click', () => {
+  console.log('reset break btn clicked');
   resetbreakTimer();
 });
 //toggle event listener
-document.getElementById("sliderBtn").addEventListener("click", (e) => { 
+document.getElementById('sliderBtn').addEventListener('click', (e) => { 
 });
 
 // global variable for session timer
-const longTimerDisplay = document.querySelector("#sessionMinutes");
+const longTimerDisplay = document.querySelector('#sessionMinutes');
 
 //session timer function
 function displayTimer(currentTime) {
@@ -84,7 +83,7 @@ function resetWorkTimer() {
 }
 
 // //globarl variable for break
-const breakTimerDisplay = document.querySelector(".text");
+const breakTimerDisplay = document.querySelector('.text');
 
 //function for break timer
 function breakTimer(breakTime, displayBreak) {
@@ -93,7 +92,7 @@ function breakTimer(breakTime, displayBreak) {
   let breakSeconds = breakTime % 60;
   console.log(breakSeconds);
   if (breakSeconds < 10) {
-    breakSeconds = "0" + breakSeconds;
+    breakSeconds = '0' + breakSeconds;
   }
   if (min < 10) {
     min = "0" + min;
@@ -108,7 +107,7 @@ function breakTimer(breakTime, displayBreak) {
   if (breakTime === 0) {
     audio.play();
   }
-  displayBreak.innerHTML = min + ":" + breakSeconds;
+  displayBreak.innerHTML = min + ':' + breakSeconds;
 }
 breakTimer(breakTimerTime, breakTimerDisplay);
 
@@ -138,7 +137,7 @@ function resetbreakTimer() {
 //toggle Button between long timer & short timer
 function toggleBtn(isBreakTimer) {
   let shortTimeToggleBtn = document.getElementById('break');
-  let longTimerSession = document.getElementById('sessionTime');
+  let longTimerSession = document.getElementById('session-time');
   if (isBreakTimer === true) {
     resetWorkTimer();
     longTimerSession.style.display = 'none';
