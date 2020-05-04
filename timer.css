@@ -13,6 +13,12 @@ body{
   padding: 10px;
   font-family: "Playfair Display", serif;
 }
+.button{
+  background-color:white;
+  font-size: 14px;
+  border-radius: 2px;
+  padding-top: 1px;
+}
 h1{
   text-shadow: 2px 2px #2F4F4F;
   color:white;
@@ -21,7 +27,7 @@ h1{
   font-size: 24px;
   padding-left: 0px;
 }
-#sessionTime{
+#session-time{
   color: white;
   padding-bottom: 15px;
   padding-top: 15px;
@@ -30,12 +36,6 @@ h1{
   color: white;
   padding-bottom: 25px;
   padding-top: 10px;
-}
-.buttons {
-  background-color: white;
-  font-size: 14px;
-  border-radius: 8px;
-  padding-top: 25px;
 }
 .switch {
   position: relative;
