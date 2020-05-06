@@ -1,45 +1,45 @@
-<!DOCTYPE html>
 <html>
 
 <head>
-    <meta charset='utf-8' />
-    <meta http-equiv='X-UA-Compatible" content="IE=edge'/>
-    <title>Pomodoro Timer</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'/>
-    <link rel='stylesheet' href='timer.css'/>
-    <link href='https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet'/>
+  <meta charset='utf-8' />
+  <meta http-equiv='X-UA-Compatible" content="IE=edge' />
+  <title>Pomodoro Timer</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1' />
+  <link rel='stylesheet' href='timer.css' />
+  <link href='https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet' />
 </head>
 
 <body>
-    <div id='container'>
-        <h1>Pomodoro Timer</h1>
-        <div id='container-two'>
-            <div id='switch-box'>
-                <label class='switch'>
-                    <input type='checkbox' id='slider-btn'/>
-                    <span class='slider-round'></span>
-                </label>
-            </div>
-            <div id='session-time'>
-                <span class='heading'>Session</span>
-                <span id='session-text'> 
-                <div class='heading'id="session-minutes"></div>
-                <button class='button' id="start">Start</button>
-                <button class='button' id="pause">Pause</button>
-                <button class='button' id="reset">Reset</button>
-            </div>
+  <div id='container'>
+    <h1>Pomodoro Timer</h1>
+    <div id='container-two'>
+      <div id='switch-box'>
+        <label class='switch'>
+          <input type='checkbox' id='slider-btn' />
+          <span class='slider-round'></span>
+        </label>
+      </div>
+      <div id='session-time'>
+        <span class='heading'>Session</span>
+        <p id='session-text'> text</p>
+        <div class='heading' id="session-minutes"></div>
+        <button class="button" id='start'>Start</button>
+        <button class="button" id='pause'>Pause</button>
+        <button class="button" id='reset'>Reset</button>
+      </div>
+    </div>
+    <div id='container-three'>
+      <div class='heading' id="break">Break</p>
+        <p class="text-break">text</p>
+        <div id="break-btns">
+          <button class="button" id='start-brk'>Start</button>
+          <button class="button" id='pause-brk'>Pause</button>
+          <button class="button" id='reset-brk'>Reset</button>
+          <script src="timer.js"></script>
         </div>
-        <div id="container-three">
-            <div class='heading'id="break">Break</p>
-                <p class="text"></p>
-                <div id="break-btns">
-                    <button class='button' id="start-brk">Start</button>
-                    <button class='button' id="pause-brk">Pause</button>
-                    <button class='button'  id="reset-brk">Reset</button>
-                    <script src="timer.js"></script>
-                </div>
-            </div>
-        </div>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>
