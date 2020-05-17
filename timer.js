@@ -15,15 +15,15 @@ toggleBtn(false);
 document.getElementById('start').addEventListener("click",workTimer);
 document.getElementById('pause').addEventListener("click",stopWorkTimer);
 document.getElementById('reset').addEventListener("click",resetWorkTimer);
-document.getElementById('start-brk').addEventListener("click",shortTimer);
+document.getElementById('start-brk').addEventListener("click",breakTimer);
 document.getElementById('pause-brk').addEventListener("click",stopBreakTimer);
-document.getElementById('reset-brk').addEventListener("click",resetShortTimer);
+document.getElementById('reset-brk').addEventListener("click",resetBreakTimer);
 
 document.getElementById('slider-btn').addEventListener("click", (e) => {
   toggleBtn(e.target.checked);
 });
 
-const workTimerDisplay = document.querySelector('#session-text');
+const workTimerDisplay = document.getElementById('session-text');
 
 function displayWorkTimer(currentTime, display) {
   let minutes = parseInt(currentTime / 60);
@@ -42,7 +42,7 @@ function displayWorkTimer(currentTime, display) {
   if (currentTime === 0) {
     audio.play();
   }
-  workTimerDisplay.innerHTML = minutes + ":" + seconds;
+  workTimerDisplay.innerHTML=minutes + ":" + seconds;
 }
 
 function workTimer() {
@@ -62,7 +62,7 @@ function resetWorkTimer() {
   displayWorkTimer(workSeconds, workTimerDisplay);
 }
 
-const brakeTimerDisplay = document.querySelector('.text-break');
+const brakeTimerDisplay=document.getElementById('text-break');
 
 function displayBreakTimer(brakeTime, displayBrake) {
   let min = parseInt(brakeTime / 60);
@@ -88,32 +88,32 @@ function displayBreakTimer(brakeTime, displayBrake) {
   displayBrake.innerHTML=min + ":" + breakSeconds;
 }
 
-function shortTimer() {
+function breakTimer() {
   brakeIntervalID = setInterval(function () {
-    displayBreakTimer(breakSeconds, brakeTimerDisplay);
+    (breakSeconds, brakeTimerDisplay);
     breakSeconds = breakSeconds - 1;
   }, 1000);
 }
 
-function stopBrakeTimer() {
-  clearTimeout(breakIntervalID);
+function stopBreakTimer() {
+  clearTimeout(brakeIntervalID);
 }
 
-function resetShortTimer() {
+function resetBreakTimer() {
   stopBreakTimer();
   breakSeconds = 300;
   displayBreakTimer(breakSeconds, brakeTimerDisplay);
 }
 
 function toggleBtn(isBrakeTimer) {
-  let shortTimeToggleBtn = document.getElementById('container-three');
-  let workTimerSession = document.getElementById('session-time');
+  let breakToggle = document.getElementById('text-break');
+  let workTimerSession = document.getElementById('session-text');
   if (isBrakeTimer === true) {
     resetWorkTimer();
-    workTimerSession.style.display='none'
-    shortTimeToggleBtn.style.display='block'
-  } else {
-    workTimerSession.style.display='block'
-    shortTimeToggleBtn.style.display='none';
+    workTimerSession.style.display='none';
+    breakToggle.style.display = 'block';
+  } else{
+    workTimerSession.style.display='block';
+    breakToggle.style.display = 'none';
   }
 }
