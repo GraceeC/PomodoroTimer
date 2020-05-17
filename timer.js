@@ -105,15 +105,14 @@ function resetBreakTimer() {
 }
 
 function toggleBtn(isBreakTimer) {
-  let breakToggle = document.getElementById("break");
-  let workTimerSession = document.getElementById("session-time");
+  let breakToggle = document.getElementById('break');
+  let workTimerSession = document.getElementById('session-time');
   if (isBreakTimer === true) {
     resetWorkTimer();
-    workTimerSession.style.display = "none";
-    breakToggle.style.display = "block";
+    workTimerSession.style.display = 'none';
+    breakToggle.style.display = 'block';
   } else {
-    workTimerSession.style.display = "block";
-    breakToggle.style.display = "none";
+    workTimerSession.style.display = 'block';
+    breakToggle.style.display = 'none';
   }
 }
-
