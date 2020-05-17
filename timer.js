@@ -47,8 +47,8 @@ function displayWorkTimer(currentTime, display) {
 
 function workTimer() {
   workTimeIntervalID = setInterval(function () {
-    displayWorkTimer(workSeconds, workTimerDisplay);
     workSeconds = workSeconds - 1;
+    displayWorkTimer(workSeconds, workTimerDisplay);
   }, 1000);
 }
 
@@ -85,7 +85,7 @@ function displayBreakTimer(brakeTime, displayBrake) {
   if (brakeTime === 0) {
     audio.play();
   }
-  displayBrake.innerHTML=min + ":" + breakSeconds;
+  displayBrakeTimer.innerHTML=min + ":" + breakSeconds;
 }
 
 function breakTimer() {
