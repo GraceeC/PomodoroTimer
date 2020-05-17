@@ -106,7 +106,7 @@ function resetBreakTimer() {
 }
 
 function toggleBtn(isBrakeTimer) {
-  let breakToggle = document.getElementById('text-break');
+  let breakToggle = document.getElementById('break-text');
   let workTimerSession = document.getElementById('session-text');
   if (isBrakeTimer === true) {
     resetWorkTimer();
